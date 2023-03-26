@@ -164,6 +164,8 @@ $i++;
   
   </head>
   <body>
+  <a href="./seasonalreport.php"> <button style="float:right;margin-right:2%;margin-bottom:2%;" type="button" class="custom-btn">
+Seasonal Report</button> </a>
 
   <a href="./datewisereport.php"> <button style="float:right;margin-right:2%;" type="button" class="custom-btn">
 Custom Report</button> </a>

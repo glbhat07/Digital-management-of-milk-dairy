@@ -270,7 +270,7 @@ $i=0;
 
 <?php
 include 'monthlyreport.php';
-include 'seasonalreport.php';
+// include 'seasonalreport.php';
 include 'tlksidebar.php';
 
 ?>

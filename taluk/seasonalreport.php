@@ -1,6 +1,6 @@
 <?php
 
-//include 'tlksidebar.php';
+include 'tlksidebar.php';
 
 session_start();
 $conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
@@ -250,7 +250,7 @@ $seasons = array("Monsoon","Autumn","Winter","Summer");
 
 
 
-       <div style="margin-left:19%;margin-top:4%;width:80%">
+       <div style="margin-left:19%;margin-top:5%;width:80%">
        <h2>Seasonal Variations in Quantity of Milk collected </h2> 
 
         </div>
@@ -306,7 +306,7 @@ $seasons = array("Monsoon","Autumn","Winter","Summer");
 
         var data = google.visualization.arrayToDataTable([
 
-           ['<----------------------------SEASONS--------------------------->','Quantity(in Ltrs)'],
+           ['<----------------------------SEASONS--------------------------->','Fat content'],
 
          <?php
 
@@ -379,7 +379,13 @@ $seasons = array("Monsoon","Autumn","Winter","Summer");
     This seasonal variation affect the Fat content of the milk directly or indirectly by affecting the food conditions of the animals.
     </p>
     </div>
+    <?php
 
+
+
+?>
     </body>
 
 </html>
+
+
