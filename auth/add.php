@@ -5,7 +5,7 @@
 
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 // if(isset($_POST['add-btn']))
 {
     $emp_id = $_GET['id'];

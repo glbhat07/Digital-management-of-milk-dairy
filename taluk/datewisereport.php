@@ -5,7 +5,7 @@ include 'tlksidebar.php';
 
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
 
@@ -22,6 +22,8 @@ $res = mysqli_query($conn,"SELECT * FROM region WHERE upper_reg = '$empreg'");
 <html>
     <head>
         <title> </title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
         <style>
             strong{
                 color:red;
@@ -104,8 +106,12 @@ $res = mysqli_query($conn,"SELECT * FROM region WHERE upper_reg = '$empreg'");
 
             // echo "SELECT * FROM `delivery` WHERE r_f_no=$f_no $start $end";
 
+            $res3 = mysqli_query($conn,"SELECT * FROM region WHERE reg_code = ".$_REQUEST['region']);
+            $fetchreg=mysqli_fetch_array($res3);
+            $regname=$fetchreg['reg_name'];
           
-            echo "Milk Collected for '$value1' from ".$_REQUEST['from'] ." to ". $_REQUEST['to'];
+            echo "Milk Collected for '$regname' from ".$_REQUEST['from'] ." to ". $_REQUEST['to'];
+
         }
         ?></h5>
     <table style="margin-top:20px;" class="table table-hover table-striped table-condensed table-bordered">
@@ -171,4 +177,7 @@ $res = mysqli_query($conn,"SELECT * FROM region WHERE upper_reg = '$empreg'");
         document.body.innerHTML = originalContents;
     }
 </script>
-
+<?php
+include 'tlksidebar.php';
+?>
+<?php include '../incl/footer.incl.php'; ?>

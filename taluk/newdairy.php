@@ -4,7 +4,7 @@
 // include 'search.php';<?php
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 
 ?>
@@ -157,3 +157,4 @@ form.addEventListener('submit',function(e) {
   </body>
 </html>
 
+<?php include '../incl/footer.incl.php'; ?>

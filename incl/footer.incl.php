@@ -1,6 +1,6 @@
 </div>
-<div id="footer" class="modal-footer">
-    &copy; <?php echo date('Y'); ?> <a href="">Live Technologies.</a>.
+<div style="position:fixed;bottom:0;right:0;" id="footer" class="modal-footer" >
+    &copy; <?php echo date('Y'); ?> <a href=""><b>NIE Mysore(Batch-B9).</b> &nbsp;</a>
 </div>
 <script type="text/javascript" src="<?php Page_Url() ?>js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="<?php Page_Url() ?>js/dataTableDefaults.js"></script>

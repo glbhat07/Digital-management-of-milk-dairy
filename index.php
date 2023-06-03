@@ -51,3 +51,4 @@
   
 </body>
 </html>
+<?php include 'incl/footer.incl.php'; ?>

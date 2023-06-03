@@ -3,7 +3,7 @@
 // echo $_GET['id'];
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
 
@@ -48,3 +48,4 @@ if(mysqli_num_rows($opt)>0){
 }
 
 ?>
+<?php include '../incl/footer.incl.php'; ?>

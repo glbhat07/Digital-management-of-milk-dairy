@@ -51,12 +51,12 @@ include './adminsidebar.php';
 </div>
 <!-- END .region-content-->
 <!-- .region-right-sidebar-->
-  <div class="region region-right-sidebar col-xs-12 col-sm-3 col-md-3 col-lg-3">
+  <!-- <div class="region region-right-sidebar col-xs-12 col-sm-3 col-md-3 col-lg-3">
     <div id="block-menu-block-1" class="block block-menu-block menu-rightSidebar">
   
      
               <h3 class="block-title">Milk Unions</h3>
-           
+<!--            
          
 <div class="content">
 <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2">
@@ -76,10 +76,10 @@ include './adminsidebar.php';
 <li class="leaf menu-mlid-1061"><a href="https://www.kmfnandini.coop/en/milk-unions/shivamogga-co-operative-milk-producers-societies-union-limited"><i class=""></i> Shivamogga Milk Union</a></li>
 <li class="leaf menu-mlid-1062"><a href="https://www.kmfnandini.coop/en/milk-unions/tumakuru-co-operative-milk-producers-societies-union-limited"><i class=""></i> Tumakuru Milk Union</a></li>
 <li class="last leaf menu-mlid-1727"><a href="/en/node/2685">Chikkaballapura Milk Union</a></li>
-</ul></div>
+</ul></div> -->
 
 </div>
-</div>
+</div> -->
   </div>
 <!-- END .region-right-sidebar-->
 		</div>
@@ -91,3 +91,4 @@ include './adminsidebar.php';
         ?>
 
 </body>
+<?php include '../incl/footer.incl.php'; ?>

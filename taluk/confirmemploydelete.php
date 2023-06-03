@@ -10,3 +10,4 @@ $empid = $_GET['emp_id'];
     history.back();
   }
 </script>
+<?php include '../incl/footer.incl.php'; ?>

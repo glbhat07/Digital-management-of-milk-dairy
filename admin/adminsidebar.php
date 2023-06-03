@@ -93,9 +93,15 @@
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="./pricechart.php">
                   <span class="icon"><i class="fas fa-border-all"></i></span>
                   <span class="title">Price chart</span>
+                </a>
+              </li>
+              <li>
+                <a href="./quality.php">
+                  <span class="icon"><i class="fa fa-check"></i></span>
+                  <span class="title">Quality</span>
                 </a>
               </li>
             </ul>

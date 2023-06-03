@@ -3,9 +3,16 @@
 // include 'tlksidebar.php';
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
+
+
+$reg_res = mysqli_query($conn,"SELECT * FROM employ WHERE emp_id = '$emp_id'");
+$fetch_reg = mysqli_fetch_array($reg_res);
+$region = $fetch_reg['emp_region'];
+$name = $fetch_reg['emp_name'];
+$_SESSION['region'] = $region;
 
 $opt = mysqli_query($conn,"SELECT emp_region FROM employ WHERE emp_id = '$empid'");
 if(mysqli_num_rows($opt)>0){ 
@@ -165,6 +172,23 @@ $i++;
   
   </head>
   <body>
+<div style="margin-left:19%;margin-top:6%;">
+<div style="width:100%;">
+        <div class="justify-content-center">
+            <blockquote class="blockquote text-center">
+                <h2 class="mb-0 mt-4">WELCOME <?php echo $name;?>!!</h2>
+            </blockquote>
+        </div>
+        <div class="justify-content-end">
+            <p>Date/Time: <span id="datetime"></span></p>
+
+            <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toDateString();
+            </script>
+        </div>
+    </div>
+</div>
 
     <?php
 
@@ -196,8 +220,6 @@ $i++;
 <!-- Table Search JS -->
   <script  src="../js/admin/search.js"></script>
   
-  </body>
-</html>
 
 
 
@@ -207,18 +229,9 @@ $i++;
 $i=0;
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>report</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-</head>
-<body>
 
 
-	<div style="margin-left:19%;margin-top:5%;"class="container">
+	<div style="margin-left:19%;margin-top=6%"class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<h1 style="align:center">Contribution of different Milk-Dairies</h1>
@@ -268,12 +281,13 @@ $i=0;
 </body>
 </html>
 
-<?php
-include 'monthlyreport.php';
+ <?php
+// include 'monthlyreport.php';
 // include 'seasonalreport.php';
-include 'tlksidebar.php';
+// include 'tlksidebar.php';
 
 ?>
+<?php include '../incl/footer.incl.php'; ?> 
 
 
 

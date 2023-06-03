@@ -1,6 +1,6 @@
 <?php
 $regcode = $_GET['regcode'];
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $delete = mysqli_query($conn,"DELETE * FROM region WHERE reg_code = '$reg_code'");
 
@@ -20,3 +20,4 @@ if($delete){
 </script>';
 }
 ?>
+<?php include '../incl/footer.incl.php'; ?>

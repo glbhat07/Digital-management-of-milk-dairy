@@ -102,7 +102,7 @@
 
     <?php
 
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $res = mysqli_query($conn,"SELECT * FROM employ WHERE emp_region IN(SELECT reg_code from region r WHERE upper_reg = '$empreg')");
 

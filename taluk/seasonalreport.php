@@ -3,7 +3,7 @@
 include 'tlksidebar.php';
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
 
@@ -387,5 +387,10 @@ $seasons = array("Monsoon","Autumn","Winter","Summer");
     </body>
 
 </html>
+
+<?php
+include 'tlksidebar.php';
+?>
+<?php include '../incl/footer.incl.php'; ?>
 
 

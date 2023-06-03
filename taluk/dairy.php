@@ -2,7 +2,7 @@
 include 'tlksidebar.php';
 session_start();
 
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
 
@@ -105,7 +105,7 @@ if(mysqli_num_rows($opt)>0){
 
     <?php
 
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $res = mysqli_query($conn,"SELECT * from region WHERE upper_reg = '$empreg'");
 
@@ -150,3 +150,4 @@ echo '<span style="color:Red"> "No records found"</span>';
 </div>
   </body>
 </html>
+<?php include '../incl/footer.incl.php'; ?>

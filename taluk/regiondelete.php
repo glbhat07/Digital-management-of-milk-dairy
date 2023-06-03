@@ -10,3 +10,4 @@ $regcode = $_GET['regcode'];
     history.back();
   }
 </script>
+<?php include '../incl/footer.incl.php'; ?>

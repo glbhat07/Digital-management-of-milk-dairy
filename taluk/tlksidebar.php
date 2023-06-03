@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 
 $empid = $_SESSION['emp_id'];
 
@@ -103,19 +103,19 @@ if(mysqli_num_rows($opt)>0){
                 </a>
               </li>
               <li>
-                <a href="./report.php">
+                <a href="./monthlyreport.php">
                   <span class="icon"><i class="fas fa-chart-pie"></i></span>
                   <span class="title">Data Tables</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="./pricechart.php">
                   <span class="icon"><i class="fas fa-border-all"></i></span>
                   <span class="title">Price chart</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="./quality.php">
                   <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                   <span class="title">Quality</span>
                 </a>

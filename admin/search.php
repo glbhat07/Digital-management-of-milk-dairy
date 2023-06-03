@@ -99,7 +99,7 @@ include 'adminsidebar.php';
 
     <?php
 
-$conn=mysqli_connect('localhost','root','','mgnt_dairy')or die ("Connection failure!!");
+$conn=mysqli_connect('localhost','root','','dairy_mgnt')or die ("Connection failure!!");
 include 'incl/conn.incl.php';
 $res = mysqli_query($conn,"SELECT * FROM employ");
 
@@ -141,3 +141,4 @@ echo '<span style="color:Red"> "No records found"</span>';
   
   </body>
 </html>
+<?php include '../incl/footer.incl.php'; ?>
